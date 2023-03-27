@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
 body {
     height: 100vh;
     width: 100vw;
@@ -21,6 +26,14 @@ body {
     align-items: center;
     background-color: sienna;
     color: ghostwhite;
+}
+
+.plusBtn {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
 }
 
 label {
