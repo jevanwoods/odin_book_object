@@ -17,3 +17,26 @@ console.log(book1.info());
 console.log(book2.info());
 console.log(book3.info());
 console.log(book4.info());
+
+/* Below this is the real code for the website, above is the practice */
+
+let myMovieLibrary = [];
+
+function Movie (title, director, runtime, seen) {
+  this.title = title;
+  this.director = director;
+  this.runtime = runtime;
+  this.seen = seen;
+}
+
+function addMovie (title, director, runtime, seen) {
+  console.log("This is working");
+}
+
+function openForm() {
+  document.getElementById("popForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("popForm").style.display = "none";
+}
