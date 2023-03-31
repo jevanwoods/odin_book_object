@@ -15,24 +15,31 @@
         <button type="submit" class="newMovie" onclick="openForm()"><img class="plusBtn" src="./imgs/plus-circle-outline.svg"></button>
     </div>
     <div id="popForm">
-        <h2 class="popTitle">Movie Deets</h2>
-        <div class="formDiv">
-            <label for="title">Title: </label>
-            <input type="text" id="title" placeholder="Movie Title">
+        <div class="popFormFlex">
+            <popFormTitle>
+                <h2 class="popTitle">Movie Deets</h2>
+            </popFormTitle>
+            <div class="formDiv">
+                <label for="title">Title: </label>
+                <input type="text" id="title" placeholder="Movie Title">
+            </div>
+            <div class="formDiv">
+                <label for="director">Director: </label>
+                <input type="text" id="director" placeholder="Director">
+            </div>
+            <div class="formDiv">
+                <label for="Runtime">Runtime: </label>
+                <input type="number" id="runtime" placeholder="120">
+            </div>
+            <div class="formCheckDiv">
+                <label for="seen">Have you seent?</label>
+                <input type="checkbox" id="seen" name="seent" value="seent">
+            </div>
+            <div class="bottomBtnDiv">
+                <button type="submit" class="submit">Submit</button>
+                <button type="submit" class="close" onclick="closeForm()">Close</button>
+            </div>
         </div>
-        <div class="formDiv">
-            <label for="director">Director: </label>
-            <input type="text" id="director" placeholder="Director">
-        </div>
-        <div class="formDiv">
-            <label for="Runtime">Runtime: </label>
-            <input type="number" id="runtime" placeholder="120">
-        </div>
-        <div class="formCheckDiv">
-            <label for="seen">Have you seent?</label>
-            <input type="checkbox" id="seen" name="seent" value="seent">
-        </div>
-        <button type="submit" class="close" onclick="closeForm()">Close</button>
     </div>
 </body>
 </html>
