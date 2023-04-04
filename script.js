@@ -48,3 +48,13 @@ function openForm () {
 function closeForm () {
   document.getElementById('popForm').style.display = 'none';
 }
+
+function isChecked (checkedValue) {
+  let yaSeent = document.getElementById("seen1");
+  if (yaSeent == true) {
+    var seenit = document.getElementById("yaSeent").value;
+    console.log('seenit');
+  } else {
+    console.log('ya not seent');
+  }
+}

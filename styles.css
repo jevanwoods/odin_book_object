@@ -102,8 +102,25 @@ label {
 }
 
 .movieDiv {
-    height: 150px;
+    box-sizing: border-box;
+    height: 175px;
     width: 150px;
+    padding: 15px;
     margin: 50px;
     background-color: ghostwhite;
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+.para {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.titlePara {
+    font-weight: bold;
+}
+
+.directorPara {
+    font-style: italic;
 }
