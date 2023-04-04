@@ -1,3 +1,4 @@
+/* 
 function Book (title, author, pages, have_read) {
   this.title = title;
   this.author = author;
@@ -17,19 +18,18 @@ console.log(book1.info());
 console.log(book2.info());
 console.log(book3.info());
 console.log(book4.info());
-
+*/
 /* Below this is the real code for the website, above is the practice */
 
 let myMovieLibrary = [];
 
-let title = document.getElementById("title").value;
-let director = document.getElementById("director").value;
-let runtime = document.getElementById("runtime").value;
-let seen = document.getElementById("seen").value;
-
 const dumpDiv = document.getElementById("dumpDiv");
 
 function Movie (title, director, runtime, seen) {
+  var title = document.getElementById("title").value;
+  var director = document.getElementById("director").value;
+  var runtime = document.getElementById("runtime").value;
+  var seen = document.getElementById("seen").value;
   this.title = title;
   this.director = director;
   this.runtime = runtime;
@@ -37,9 +37,7 @@ function Movie (title, director, runtime, seen) {
   console.log('something happened');
   const movieDiv = document.createElement('movieDiv');
   movieDiv.classList.add('movieDiv');
-  movieDiv.innerHTML = title;
-  movieDiv.innerHTML = director;
-  movieDiv.innerHTML = runtime;
+  movieDiv.innerHTML = title + director + runtime + seen;
   dumpDiv.appendChild(movieDiv);
 }
 
