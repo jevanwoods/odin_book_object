@@ -97,12 +97,13 @@ label {
     background-color: honeydew;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
 .movieDiv {
     height: 150px;
     width: 150px;
+    margin: 50px;
     background-color: ghostwhite;
 }

@@ -25,6 +25,7 @@ let myMovieLibrary = [];
 let title = document.getElementById("title").value;
 let director = document.getElementById("director").value;
 let runtime = document.getElementById("runtime").value;
+let seen = document.getElementById("seen").value;
 
 const dumpDiv = document.getElementById("dumpDiv");
 
@@ -33,23 +34,19 @@ function Movie (title, director, runtime, seen) {
   this.director = director;
   this.runtime = runtime;
   this.seen = seen;
-}
-
-function addMovie (title, director, runtime, seen) {
-  console.log("This is working");
-}
-
-function openForm() {
-  document.getElementById("popForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("popForm").style.display = "none";
-}
-
-function createDiv() {
-  const movieDiv = document.createElement("movieDiv");
+  console.log('something happened');
+  const movieDiv = document.createElement('movieDiv');
   movieDiv.classList.add('movieDiv');
-  movieDiv.innerHTML = title + director + runtime;
+  movieDiv.innerHTML = title;
+  movieDiv.innerHTML = director;
+  movieDiv.innerHTML = runtime;
   dumpDiv.appendChild(movieDiv);
+}
+
+function openForm () {
+  document.getElementById('popForm').style.display = 'block';
+}
+
+function closeForm () {
+  document.getElementById('popForm').style.display = 'none';
 }
