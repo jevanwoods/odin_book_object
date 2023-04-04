@@ -22,6 +22,12 @@ console.log(book4.info());
 
 let myMovieLibrary = [];
 
+let title = document.getElementById("title").value;
+let director = document.getElementById("director").value;
+let runtime = document.getElementById("runtime").value;
+
+const dumpDiv = document.getElementById("dumpDiv");
+
 function Movie (title, director, runtime, seen) {
   this.title = title;
   this.director = director;
@@ -39,4 +45,11 @@ function openForm() {
 
 function closeForm() {
   document.getElementById("popForm").style.display = "none";
+}
+
+function createDiv() {
+  const movieDiv = document.createElement("movieDiv");
+  movieDiv.classList.add('movieDiv');
+  movieDiv.innerHTML = title + director + runtime;
+  dumpDiv.appendChild(movieDiv);
 }

@@ -14,6 +14,14 @@
         <p class="titleDescription">A Library of Movies for The Odin Project</p>
         <button type="submit" class="newMovie" onclick="openForm()"><img class="plusBtn" src="./imgs/plus-circle-outline.svg"></button>
     </div>
+    <div id="dumpDiv">
+        <div class="movieDiv">
+            <p class="title">The Green Mile</p>
+            <p class="director">Frank Darabont</p>
+            <p class="runtime">189 minutes</p>
+            <p class="seent">Seent</p>
+        </div>
+    </div>
     <div id="popForm">
         <div class="popFormFlex">
             <popFormTitle>
@@ -36,7 +44,7 @@
                 <input type="checkbox" id="seen" name="seent" value="seent">
             </div>
             <div class="bottomBtnDiv">
-                <button type="submit" class="submit">Submit</button>
+                <button type="submit" class="submit" onclick="createDiv(), closeForm()">Submit</button>
                 <button type="submit" class="close" onclick="closeForm()">Close</button>
             </div>
         </div>

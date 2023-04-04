@@ -90,3 +90,19 @@ label {
     justify-content: space-evenly;
     align-items: center;
 }
+
+#dumpDiv {
+    grid-column: 1/11;
+    grid-row: 2/3;
+    background-color: honeydew;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.movieDiv {
+    height: 150px;
+    width: 150px;
+    background-color: ghostwhite;
+}
