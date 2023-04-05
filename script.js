@@ -51,10 +51,10 @@ function closeForm () {
 
 function isChecked (checkedValue) {
   let yaSeent = document.getElementById("seen1");
-  let text = document.getElementById("yaSeent");
+  let bkgrd = document.getElementById("firstMovie");
   if (yaSeent.checked == true) {
-    text.style.display = "block";
+    bkgrd.style.backgroundColor = "darkseagreen";
   } else {
-    text.style.display = "none";
+    bkgrd.style.backgroundColor = "ghostwhite";
   }
 }
