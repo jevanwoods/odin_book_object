@@ -51,10 +51,10 @@ function closeForm () {
 
 function isChecked (checkedValue) {
   let yaSeent = document.getElementById("seen1");
-  if (yaSeent == true) {
-    var seenit = document.getElementById("yaSeent").value;
-    console.log('seenit');
+  let text = document.getElementById("yaSeent");
+  if (yaSeent.checked == true) {
+    text.style.display = "block";
   } else {
-    console.log('ya not seent');
+    text.style.display = "none";
   }
 }
