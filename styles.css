@@ -28,6 +28,10 @@ body {
     color: ghostwhite;
 }
 
+.titleDescription {
+    margin-bottom: 5px;
+}
+
 .plusBtn {
     height: 50px;
     width: auto;
