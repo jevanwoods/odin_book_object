@@ -23,7 +23,9 @@ console.log(book4.info());
 
 let myMovieLibrary = [];
 
-const dumpDiv = document.getElementById("dumpDiv");
+const dumpDiv = document.getElementById('dumpDiv');
+const rmvBtn = document.getElementById('rmvBtn');
+const firstMovie = document.getElementById('firstMovie');
 
 function Movie (title, director, runtime, seen) {
   var title = document.getElementById("title").value;
@@ -57,4 +59,8 @@ function isChecked (checkedValue) {
   } else {
     bkgrd.style.backgroundColor = "ghostwhite";
   }
+}
+
+function removeMovie () {
+  firstMovie.remove();
 }
