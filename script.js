@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* 
 function Book (title, author, pages, have_read) {
   this.title = title;
@@ -31,6 +32,15 @@ function openForm () {
   document.getElementById('popForm').style.display = 'block';
 }
 
+function addMovieToArray () {
+  var title = document.getElementById("title").value;
+  var director = document.getElementById("director").value;
+  var runtime = document.getElementById("runtime").value;
+  var seen = document.getElementById("seen").value;
+  let newMovie = {title: title, director: director, runtime: runtime, seent: seen}
+  myMovieLibrary.push(newMovie);
+}
+
 function Movie (title, director, runtime, seen) {
   var title = document.getElementById("title").value;
   var director = document.getElementById("director").value;
@@ -42,13 +52,19 @@ function Movie (title, director, runtime, seen) {
   this.seen = seen;
   console.log('something happened');
   const movieDiv = document.createElement('movieDiv');
+  const removeBtn = document.createElement('button');
+  const btnText = document.createTextNode('X');
   const titleDiv = document.createElement('titleDiv');
   const directorDiv = document.createElement('directorDiv');
   const runtimeDiv = document.createElement('runtimeDiv');
   movieDiv.classList.add('movieDiv');
+  removeBtn.classList.add('removeBtn');
   titleDiv.classList.add('titleDiv');
   directorDiv.classList.add('directorDiv');
   runtimeDiv.classList.add('runtimeDiv');
+  movieDiv.append(removeBtn);
+  removeBtn.appendChild(btnText);
+  removeBtn.onclick = removeThisMovie();
   movieDiv.append(titleDiv);
   movieDiv.append(directorDiv);
   movieDiv.append(runtimeDiv);
@@ -63,15 +79,23 @@ function closeForm () {
 }
 
 function isChecked (checkedValue) {
-  let yaSeent = document.getElementById("seen1");
-  let bkgrd = document.getElementById("firstMovie");
+  let yaSeent = document.getElementById('seen1');
+  let bkgrd = document.getElementById('firstMovie');
   if (yaSeent.checked == true) {
-    bkgrd.style.backgroundColor = "darkseagreen";
+    bkgrd.style.backgroundColor = 'darkseagreen';
   } else {
-    bkgrd.style.backgroundColor = "ghostwhite";
+    bkgrd.style.backgroundColor = 'ghostwhite';
   }
 }
 
 function removeMovie () {
   firstMovie.remove();
+}
+
+function removeThisMovie () {
+  console.log('test test test');
+}
+
+function readArray () {
+  console.log(myMovieLibrary);
 }

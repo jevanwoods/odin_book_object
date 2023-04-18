@@ -109,13 +109,20 @@ label {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 175px;
-    width: 150px;
+    height: 185px;
+    width: 165px;
     padding: 15px;
     margin: 50px;
     background-color: ghostwhite;
     border: 2px black solid;
     border-radius: 10px;
+}
+
+.removeBtn {
+    height: 20px;
+    width: 20px;
+    align-self: flex-end;
+    display:
 }
 
 .titleDiv {
