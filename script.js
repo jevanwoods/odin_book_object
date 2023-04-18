@@ -27,6 +27,10 @@ const dumpDiv = document.getElementById('dumpDiv');
 const rmvBtn = document.getElementById('rmvBtn');
 const firstMovie = document.getElementById('firstMovie');
 
+function openForm () {
+  document.getElementById('popForm').style.display = 'block';
+}
+
 function Movie (title, director, runtime, seen) {
   var title = document.getElementById("title").value;
   var director = document.getElementById("director").value;
@@ -38,13 +42,20 @@ function Movie (title, director, runtime, seen) {
   this.seen = seen;
   console.log('something happened');
   const movieDiv = document.createElement('movieDiv');
+  const titleDiv = document.createElement('titleDiv');
+  const directorDiv = document.createElement('directorDiv');
+  const runtimeDiv = document.createElement('runtimeDiv');
   movieDiv.classList.add('movieDiv');
-  movieDiv.innerHTML = title + director + runtime + seen;
+  titleDiv.classList.add('titleDiv');
+  directorDiv.classList.add('directorDiv');
+  runtimeDiv.classList.add('runtimeDiv');
+  movieDiv.append(titleDiv);
+  movieDiv.append(directorDiv);
+  movieDiv.append(runtimeDiv);
+  titleDiv.innerHTML = title;
+  directorDiv.innerHTML = director;
+  runtimeDiv.innerHTML = runtime + ' minutes';
   dumpDiv.appendChild(movieDiv);
-}
-
-function openForm () {
-  document.getElementById('popForm').style.display = 'block';
 }
 
 function closeForm () {

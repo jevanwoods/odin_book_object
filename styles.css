@@ -107,6 +107,8 @@ label {
 
 .movieDiv {
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     height: 175px;
     width: 150px;
     padding: 15px;
@@ -114,6 +116,23 @@ label {
     background-color: ghostwhite;
     border: 2px black solid;
     border-radius: 10px;
+}
+
+.titleDiv {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.directorDiv {
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.runtimeDiv {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .para {
