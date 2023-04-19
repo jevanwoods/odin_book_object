@@ -37,7 +37,9 @@ function addMovieToArray () {
   var director = document.getElementById("director").value;
   var runtime = document.getElementById("runtime").value;
   var seen = document.getElementById("seen").value;
-  let newMovie = {title: title, director: director, runtime: runtime, seent: seen}
+  var uniqueID = title + runtime;
+  console.log(uniqueID);
+  let newMovie = {title: title, director: director, runtime: runtime, seent: seen, id: title + runtime };
   myMovieLibrary.push(newMovie);
 }
 
@@ -46,6 +48,7 @@ function Movie (title, director, runtime, seen) {
   var director = document.getElementById("director").value;
   var runtime = document.getElementById("runtime").value;
   var seen = document.getElementById("seen").value;
+  var uniqueID = title + runtime;
   this.title = title;
   this.director = director;
   this.runtime = runtime;
@@ -62,6 +65,7 @@ function Movie (title, director, runtime, seen) {
   titleDiv.classList.add('titleDiv');
   directorDiv.classList.add('directorDiv');
   runtimeDiv.classList.add('runtimeDiv');
+  movieDiv.setAttribute('id',uniqueID);
   movieDiv.append(removeBtn);
   removeBtn.appendChild(btnText);
   removeBtn.onclick = removeThisMovie();
