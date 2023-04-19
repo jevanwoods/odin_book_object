@@ -65,10 +65,12 @@ function Movie (title, director, runtime, seen) {
   titleDiv.classList.add('titleDiv');
   directorDiv.classList.add('directorDiv');
   runtimeDiv.classList.add('runtimeDiv');
-  movieDiv.setAttribute('id',uniqueID);
+  movieDiv.setAttribute('id', uniqueID);
+  removeBtn.setAttribute('value', uniqueID);
+  console.log('The value is ' + removeBtn.value);
   movieDiv.append(removeBtn);
   removeBtn.appendChild(btnText);
-  removeBtn.onclick = removeThisMovie();
+  removeBtn.setAttribute('onclick', 'removeThisMovie()');
   movieDiv.append(titleDiv);
   movieDiv.append(directorDiv);
   movieDiv.append(runtimeDiv);
@@ -97,7 +99,9 @@ function removeMovie () {
 }
 
 function removeThisMovie () {
-  console.log('test test test');
+  var removeValue = event.target.value;
+  var removeTarget = document.querySelectorAll('value', removeValue);
+  removeTarget.remove();
 }
 
 function readArray () {
