@@ -154,3 +154,7 @@ label {
 .directorPara {
     font-style: italic;
 }
+
+.testClass {
+    background-color: hotpink;
+}
